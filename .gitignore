@@ -1,0 +1,14 @@
+# Carpeta de configuración de entorno virtual
+venv/
+
+# Archivos de configuración local
+*.sqlite3
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de logs y caché
+log/
+__pycache__/
+
+# Archivos estáticos y de media
