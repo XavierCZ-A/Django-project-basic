@@ -1,5 +1,5 @@
 {% extends 'core.html' %}
-{% load static %}
+
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
@@ -10,9 +10,16 @@
     <title>Render</title>
 </head>
 <body>
-    <h1>Welcome to Django</h1>
-    <img src="{% static 'closex.png' %}" alt="", width="70">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id aliquam explicabo ducimus a commodi culpa reprehenderit quaerat deleniti. Qui, consectetur.</p>
+    <h1>Create a new task</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>
+            Save
+        </button>
+    </form>
+
+
 </body>
 </html>
 {% endblock %}

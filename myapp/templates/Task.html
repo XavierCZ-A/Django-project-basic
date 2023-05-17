@@ -1,3 +1,6 @@
+{% extends 'core.html' %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +16,12 @@
 
     <div>
         <h1>{{task.title}}</h1>
+        {% if task.done == False %}
+        <p>Tarea pendiente</p>
+        {% else %}
+        <p>Tarea realizada</p>
+        {% endif %}
+
         <h3>{{task.description}}</h3>
         <h5>{{task.project.name}}</h5>
         <button>
@@ -27,7 +36,6 @@
 
     {% endfor %}
 
-
-
 </body>
 </html>
+{% endblock %}
